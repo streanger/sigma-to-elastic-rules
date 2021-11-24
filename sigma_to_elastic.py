@@ -79,12 +79,13 @@ def convert_sigma_rules(rules_directory_name):
     rules_directory = Path(rules_directory_name)
     rules_files = [rules_directory.joinpath(item) for item in os.listdir(rules_directory)]
     # rules_files = rules_files[:300]
+    files_number = len(rules_files)
     
     converted_rules_file = '{}.json'.format(rules_directory_name)
     converted_rules = read_json(converted_rules_file)
     for index, rule_file in enumerate(rules_files):
         try:
-            print('{}) {}'.format(index+1, rule_file))
+            print('{}/{}) {}'.format(index+1, files_number, rule_file))
             
             # ****** check if exists ******
             rule_name = rule_file.name.split('.')[0]
