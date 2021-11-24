@@ -1,7 +1,7 @@
 # sigma_to_elastic_rules
 wrapper for uncoder.io for sigma to elastic rules convertion
 
-# related projects/websites
+## related projects/websites
 
 - https://github.com/SigmaHQ/sigma
 - https://uncoder.io/
