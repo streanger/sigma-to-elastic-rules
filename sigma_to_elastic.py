@@ -127,9 +127,21 @@ def convert_sigma_rules(rules_directory_name):
     return None
     
     
+def iter_many_directories():
+    directories = [item for item in os.listdir() if Path(item).is_dir()]
+    for index, directory in enumerate(directories):
+        print(colored('\n' + '----'*10, 'blue'))
+        print(colored('{}) {}'.format(index+1, directory).ljust(40), 'blue', 'on_white'))
+        print(colored('----'*10 + '\n', 'blue'))
+        convert_sigma_rules(directory)
+    return None
+    
+    
 if __name__ == "__main__":
     script_path()
     os.system('color')
     rules_directory_name = 'process_creation'
     convert_sigma_rules(rules_directory_name)
+    
+    # iter_many_directories()
     
