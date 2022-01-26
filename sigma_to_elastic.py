@@ -116,7 +116,7 @@ def convert_sigma_rules(rules_directory_name):
             break
             
         except Exception as err:
-            print('   [x] error catched: {}'.format(err))
+            print('    [x] error catched: {}'.format(err))
             break
             
         finally:
